@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_chat_black_24dp"
+        android:title="Messages"/>
+    <item
+        android:id="@+id/nav_inv"
+        android:icon="@drawable/ic_contacts_black_24dp"
+        android:title="Invitations"/>
+</menu>

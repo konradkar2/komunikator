@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User name:"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent">
+    </TextView>
+    <EditText
+        android:id="@+id/login_editText_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent">
+    </TextView>
+    <EditText
+        android:id="@+id/login_editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="loginClicked"
+        android:text="Login"></Button>
+    <TextView
+        android:id="@+id/login_textView_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Create an account"
+        android:textAlignment="center"
+        android:onClick="onClick"
+        android:clickable="true">
+    </TextView>
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:id="@+id/received_invitations_item_layout"
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_person_black_50dp"
+        android:id="@+id/received_invitations_image"/>
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/received_invitations_text_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/received_invitations_text_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/received_invitations_button_accept"
+            android:layout_width="wrap_content"
+            android:background="@drawable/rounded_button_green"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:textColor="@android:color/white"
+
+            />
+        <Button
+            android:id="@+id/received_invitations_button_decline"
+            android:background="@drawable/rounded_button_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"           />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

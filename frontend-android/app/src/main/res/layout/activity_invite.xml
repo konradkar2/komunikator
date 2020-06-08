@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:id="@+id/invite_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        >
+        <ImageView
+            android:id="@+id/invite_image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:src="@drawable/ic_arrow_back_black_27dp"
+            android:focusable="true"
+            android:clickable="true">
+
+        </ImageView>
+        <EditText
+            android:id="@+id/invite_editText_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search for a user."
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/invite_listView_searchResult"
+        android:layout_below="@+id/invite_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

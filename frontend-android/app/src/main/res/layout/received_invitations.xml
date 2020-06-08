@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/received_invitations_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite a friend"
+                android:layout_alignParentRight="true"
+                android:textSize="21dp"/>
+            <ImageView
+                android:id="@+id/fragment_received_image_add"
+                android:foregroundGravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:src="@drawable/ic_person_add_black_27dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:focusable="true">
+
+            </ImageView>
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/received_invitations_no_invites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You have no invites :("
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/received_invitations_toolbar"
+        android:textAlignment="center"
+        android:visibility="visible">
+
+    </TextView>
+    <ListView
+        android:layout_below="@+id/received_invitations_no_invites"
+        android:id="@+id/received_invitations_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
