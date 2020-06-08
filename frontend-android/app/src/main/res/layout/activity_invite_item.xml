@@ -13,7 +13,7 @@
         android:src="@drawable/ic_person_black_50dp"
         android:id="@+id/invite_image"/>
     <LinearLayout
-        android:layout_width="230dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="10dp">
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Username"
             android:textColor="@android:color/black"
-            android:textSize="22sp"/>
+            android:textSize="20sp"/>
         <TextView
             android:id="@+id/invite_text_about"
             android:layout_width="match_parent"
@@ -35,6 +35,7 @@
         android:id="@+id/invite_button_invite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="10sp"
         android:text="Invite"/>
 
 </LinearLayout>

@@ -122,6 +122,8 @@ public class Conversations extends Fragment {
 
     }
     private void logout(){
+        MyApplication application = ((MyApplication)getActivity().getApplication());
+        application.getNotificationListener().socket.disconnect();
         Intent intent = new Intent(getContext(), Login.class);
         startActivity(intent);
     }

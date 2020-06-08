@@ -44,12 +44,14 @@
     <ListView
         android:id="@+id/chat_List"
         android:layout_below="@+id/chat_topbar"
+        android:layout_above="@+id/chat_bottombar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="5sp"/>
     <LinearLayout
+        android:id="@+id/chat_bottombar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

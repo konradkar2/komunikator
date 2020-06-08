@@ -3,7 +3,6 @@ package com.example.messengerclonejava;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.Volley;
 import com.android.volley.RequestQueue;
 import com.android.volley.Request;
@@ -23,9 +21,7 @@ import com.example.messengerclonejava.models.UserInfo;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -109,7 +105,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void switchToFriends(){
-        Intent intent = new Intent(this, Friends.class);
+        Intent intent = new Intent(this, Navigation.class);
         startActivity(intent);
     }
     private void switchToRegister(){

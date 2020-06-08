@@ -4,7 +4,11 @@ from flask_jwt_extended import JWTManager, decode_token, get_jwt_identity
 from db import db
 from flask_socketio import SocketIO,send
 
-from resources.user import UserRegister, UserSearch, UserLogin
+from resources.user import (UserRegister,
+                           UserSearch,
+                           UserLogin,
+                           UserPassword,
+                           UserAbout)
 from resources.invitation import MyInvitations, InvitationSender, InvitationManager
 from resources.friendship import FriendList
 from resources.conversation import ConversationList,MessagesFinder,MessageSender
@@ -18,7 +22,7 @@ api = Api(app)
 
 socketio = SocketIO(app,cors_allowed_origins='*')
 
-users = []
+users_session_id = {}
 
 @socketio.on('message')
 def handleMessage(msg):
@@ -28,8 +32,10 @@ def handleMessage(msg):
 def handleToken(token):
     print("Token: "+ token)   
     decoded_token = decode_token(token)
-    print(decoded_token)
-    users.append({decoded_token['identity'] : request.sid}) 
+    user_id = decode_token['identity']
+    users_session_id[user_id] = request.sid
+    
+    
 
 
 
@@ -78,6 +84,8 @@ def create_tables():
 
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin,'/auth')
+api.add_resource(UserPassword,'/reset')
+api.add_resource(UserAbout,'/aboutuser')
 
 api.add_resource(UserSearch, '/search/<string:username>')
 
