@@ -1,0 +1,13 @@
+*dotyczą tylko backendu, najlepiej testować w postmanie
+
+1. Uzupełnij zasób UserAbout (/resources)
+	-metoda get ma zwracać pole "about" aktualnie zalogowanego użytkownika
+	-metoda put ma je ustawiać 
+	
+	przydatne funkcje: get_jwt_identity()
+2. Na podstawie zasobów UserLogin i UserRegister utwórz zasób UserPassword - następnie utwórz dowolny endpoint w pliku app.py
+	
+	Zasób ma mieć na celu zmiane hasła użytkownika metodą put, można zrobić to na 2 sposoby
+	a) skorzystać z tokenu, wtedy użytkownik prześle tylko zmienne password_old i password_new
+	b) bez korzystania z tokenu - dodatkowo będzie wymagane pole user_id lub username
+	
