@@ -1,0 +1,26 @@
+Backend
+	Wymagania:
+	python 3.x.x
+	virtualenv (instalujemy przez "pip install virtualenv") - może być też inne środowisko
+
+	1.Odpalamy CMD, przechodzimy do folderu backend
+	2.wpisujemy "virtualenv myenv" - czekamy
+	3.przechodzimy do backend/myenv/Scripts 
+	4.wpisujemy "activate.bat"
+	5.wracamy do folderu backend
+	6.wpisujemy "pip install -r requirements.txt"
+	7.odpalamy appke wpisując "python app.py"
+	*serwer obslugujacy aplikacje jest typu development, czas odpowiedzi może
+	być długi
+
+Frontend
+	1.Otwieramy projekt w Android Studio
+	2.w pliku frontend-android/app/build.gradle ustawiamy swój lokalny adres ip
+	2.Tworzymy wirtualny smartfon(i pobieramy androida - środowisko zrobi to za nas) 
+	- rozwijana lista u góry, obok ikonki "play", wybieramy open AVD manager.
+	3.Jak już mamy telefon to klikamy na ikonke "play"
+	
+
+Krótki opis api: https://documenter.getpostman.com/view/7143213/SzzdCg73?version=latest
+
+*W folderze jest również plik postman_collection.json, możecie go zaimportować do postmana i testować endpointy.
