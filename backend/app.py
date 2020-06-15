@@ -32,7 +32,7 @@ def handleMessage(msg):
 def handleToken(token):
     print("Token: "+ token)   
     decoded_token = decode_token(token)
-    user_id = decode_token['identity']
+    user_id = decoded_token['identity']
     users_session_id[user_id] = request.sid
     
     
