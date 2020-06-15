@@ -1,5 +1,6 @@
 Krótki opis api: https://documenter.getpostman.com/view/7143213/SzzdCg73?version=latest
-
+*wszystkie zapytania prócz register i auth wymagają podania tokenu uwierzytelniającego w nagłówku zapytania
+Authorization; Bearer <token>
 
 Backend
 	Wymagania:
@@ -16,5 +17,8 @@ Backend
 	*serwer obslugujacy aplikacje jest typu development, czas odpowiedzi może
 	być długi (+50ms)
 
-
+Opis funkcjonalności:
+-rejestracja użytkownika
+-uwierzytelnienie użytkownika - w odpowiedzi zwrotnej otrzymamy token ważny 15min
+-
 
