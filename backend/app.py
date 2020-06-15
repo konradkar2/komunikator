@@ -11,7 +11,11 @@ from resources.user import (UserRegister,
                            UserAbout)
 from resources.invitation import MyInvitations, InvitationSender, InvitationManager
 from resources.friendship import FriendList
-from resources.conversation import ConversationList,MessagesFinder,MessageSender
+from resources.conversation import (ConversationList,
+                                    MessagesFinder,
+                                    MessageSender,
+                                    ConversationManager,
+                                    ConversationMaker)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -96,6 +100,8 @@ api.add_resource(InvitationManager, '/invitation/manage')
 api.add_resource(FriendList, '/friends')
 
 api.add_resource(ConversationList, '/conversations')
+api.add_resource(ConversationManager, '/adduser')
+api.add_resource(ConversationMaker, '/create')
 api.add_resource(MessagesFinder, '/message/<string:conversation_id>/<int:last_message_id>')
 api.add_resource(MessageSender, '/message/<string:conversation_id>',resource_class_kwargs={'socket': socketio})
 

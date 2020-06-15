@@ -26,7 +26,7 @@ class InvitationSender(Resource):
 
         user = UserModel.find_by_id(recipient_id)
         if not user:
-            return {'message': 'User does not exist.'}, 400
+            return {'message': 'User does not exist.'}, 404
         myId = get_jwt_identity()
         if myId == recipient_id:
             return {'message': 'You cant invite yourself.'}, 400
